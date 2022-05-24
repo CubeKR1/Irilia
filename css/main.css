@@ -1,0 +1,299 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16.2px;
+    font-weight: 500;
+}
+
+li {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16.2px;
+    font-weight: 500;
+    padding-top: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 200;
+}
+
+#container {
+    display: grid;
+    height: 500vh;
+    width: 100%;
+    grid-template-areas:
+        "lefty head righty"
+    ;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#lefty {
+    grid-area: lefty;
+    background: linear-gradient(to left, white, #BD43E0);
+}
+
+#righty {
+    grid-area: righty;
+    background: linear-gradient(to right, white, #BD43E0);
+}
+
+#content-area {
+    display: grid;
+    grid-area: head;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    grid-template-areas:
+        "title"
+        "link-bar"
+        "intro-text"
+        "glorimont"
+        "lysøen"
+        "ringøerne"
+    ;
+    grid-template-rows: 3% 1.25% 8.25% 20% 20% 20%;
+}
+
+#title {
+    grid-area: title;
+    display: grid;
+    place-items: center;
+    background: #7ECEE0;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+#iri-title {
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#link-bar {
+    grid-area: link-bar;
+    background: #4A947E;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-rows: 100%;
+}
+
+.interlink {
+    padding-top: 8%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid black;
+    font-size: 1.10em;
+    font-family: 'Gayathri', sans-serif;
+}
+
+.interlink:hover {
+    background: #18A893;
+}
+
+#intro-text {
+    display: grid;
+    grid-area: intro-text;
+    grid-template-areas:
+        "intro intro intro"
+        "conti-list quote ingame-dato"
+    ;
+    grid-template-columns: 42% 20% 38%;
+    grid-template-rows: 30% 80%;
+    border-bottom: 2px solid black;
+}
+
+#intro {
+    grid-area: intro;
+    margin: 1.5% 4.5% 0 4.5%;
+}
+
+#conti-list {
+    margin-top: 2%;
+    grid-area: conti-list;
+    margin-left: 11%;
+}
+
+#quote {
+    margin-top: 4%;
+    grid-area: quote;
+}
+
+#ingame-dato {
+    margin-top: 2%;
+    grid-area: ingame-dato;
+    text-align: center;
+}
+
+#glorimont {
+    grid-area: glorimont;
+    padding-top: 3%;
+    border-bottom: 2px solid black;
+}
+
+#glor-title {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#glor-text {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#glor-img {
+    width: 70%;
+    border: 2px solid black;
+    margin: 0% auto 5% auto; 
+    display: block;
+}
+
+#lysøen {
+    grid-area: lysøen;
+    padding-top: 3%;
+    border-bottom: 2px solid black;
+}
+
+#lys-title {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#lys-text {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#lys-img {
+    width: 70%;
+    border: 2px solid black;
+    margin: 0% auto 5% auto; 
+    display: block;
+}
+
+#ringøerne {
+    grid-area: ringøerne;
+    padding-top: 3%;
+    border-bottom: 2px solid black;
+}
+
+#ring-title {
+    text-align: center;
+    font-size: 200%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#ring-text {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#ring-img {
+    width: 70%;
+    border: 2px solid black;
+    margin: 0% auto 5% auto; 
+    display: block;
+}
+
+.display-container {
+    position: relative;
+}
+
+.img-square {
+    position: relative;
+    grid-area: img;
+}
+
+.dot-container {
+    position: absolute;
+}
+
+.dot-continent {
+    position: relative;
+    border-radius: 50%;
+    left: 650px;
+    top: 300px;
+    background: rgb(125, 131, 131);
+    width: 12px;
+    height: 12px;
+    transition:
+        width 0.5s linear,
+        height 0.5s linear,
+        transform 0.5s linear,
+        background 0.3s linear
+    ;
+}
+
+.wrap-dot {
+    position: relative;
+    transition:
+        transform 0.5s linear
+    ;
+    width: 0;
+    height: 0;
+    z-index: 2;
+}
+
+.button-continent {
+    visibility: hidden;
+    position: relative;
+    left: 608px;
+    top: 170px;
+    z-index: 1;
+    transition:
+        transform 0.5s linear,
+        visibility 0.5s linear
+    ;
+}
+
+.button {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    color: white;
+    z-index: 3;
+    border-radius: 5px;
+    transition:
+        background 0.5s linear
+    ;
+}
+
+.button:hover {
+    border: 3px solid rgb(100, 106, 106);
+}
+
+.triangle {
+    position: relative;
+    transform: rotate(45deg);
+    width: 17.5px;
+    height: 17.5px;
+    background: rgba(0, 0, 0, 0);
+    z-index: 1;
+    left: 40px;
+    top: -12px;
+    border-radius: 5px 5px 0px 5px;
+    transition:
+        background 0.2s ease
+    ;
+}

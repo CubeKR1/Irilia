@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+li {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16.2px;
+    font-weight: 500;
+    padding-top: 2%;
+}
+
+a {
+    font-family: 'Gayathri', sans-serif;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+#container {
+    display: grid;
+    height: 125vh;
+    width: 100%;
+    grid-template-areas:
+        "lefty head righty"
+    ;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#lefty {
+    grid-area: lefty;
+    background: linear-gradient(to left, white, #3c30a6);
+}
+
+#righty {
+    grid-area: righty;
+    background: linear-gradient(to right, white, #3c30a6);
+}
+
+#content-area {
+    display: grid;
+    grid-area: head;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    grid-template-areas:
+        "title"
+        "link-bar"
+        "intro"
+        "settings"
+    ;
+    grid-template-rows: 12% 5% 20% 63%;
+}
+
+#title {
+    grid-area: title;
+    display: grid;
+    place-items: center;
+    background: #7ECEE0;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+#jasard-title {
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#link-bar {
+    grid-area: link-bar;
+    background: #4A947E;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-rows: 100%;
+}
+
+.interlink {
+    padding-top: 8%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid black;
+    font-size: 1.10em;
+    font-family: 'Gayathri', sans-serif;
+}
+
+.interlink:hover {
+    background: #18A893;
+}
