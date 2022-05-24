@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+p {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16.2px;
+    font-weight: 500;
+}
+
+li {
+    font-family: 'Gayathri', sans-serif;
+    font-size: 16.2px;
+    font-weight: 500;
+    padding-top: 2%;
+}
+
+a {
+    font-family: 'Gayathri', sans-serif;
+    text-decoration: none;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+#container {
+    display: grid;
+    height: 250vh;
+    width: 100%;
+    grid-template-areas:
+        "lefty head righty"
+    ;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#lefty {
+    grid-area: lefty;
+    background: linear-gradient(to left, white, #2970F2);
+}
+
+#righty {
+    grid-area: righty;
+    background: linear-gradient(to right, white, #2970F2);
+}
+
+#content-area {
+    display: grid;
+    grid-area: head;
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+    grid-template-areas:
+        "title"
+        "link-bar"
+        "intro"
+        "judeos"
+        "primgod"
+        "altgod"
+    ;
+    grid-template-rows: 6% 2.5% 10% 17% 28% 28%;
+}
+
+#title {
+    grid-area: title;
+    display: grid;
+    place-items: center;
+    background: #7ECEE0;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+}
+
+#pant-title {
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+}
+
+#link-bar {
+    grid-area: link-bar;
+    background: #4A947E;
+    border-bottom: 2px solid black;
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15%;
+    grid-template-rows: 100%;
+}
+
+.interlink {
+    padding-top: 8%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-right: 1px solid black;
+    font-size: 1.10em;
+    font-family: 'Gayathri', sans-serif;
+}
+
+.interlink:hover {
+    background: #18A893;
+}
+
+#intro {
+    grid-area: intro;
+    border-bottom: 2px solid black;
+    display: grid;
+    place-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#judeos {
+    grid-area: judeos;
+    display: grid;
+    grid-template-areas:
+        "judeos-title"
+        "judeos-text"
+        "anor-quote"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 20% 60%;
+    border-bottom: 2px solid black;
+}
+
+#judeos-title {
+    grid-area: judeos-title;
+}
+
+#anor-quote {
+    grid-area: anor-quote;
+    text-align: center;
+    font-size: 0.95em;
+    margin-top: 3%;
+}
+
+#judeos-text {
+    grid-area: judeos-text;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#primgod {
+    grid-area: primgod;
+}
+
+#prim-text {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#altgod {
+    grid-area: altgod;
+}
+
+#alt-text {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.npc-container {
+    margin: 0 auto 0 auto;
+    display: grid;
+    height: 50vh;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    grid-template-areas: 
+        "choose . texts"
+    ;
+    grid-template-columns: 30% 2% 68%;
+    grid-template-rows: 100%;
+}
+
+#primgod-text {
+    grid-area: texts;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 1.10em;
+    padding: 20px;
+    overflow: auto;
+}
+
+#altgod-text {
+    grid-area: texts;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    font-family: 'Gayathri', sans-serif;
+    font-size: 1.10em;
+    padding: 20px;
+    overflow: auto;
+}
+
+.npc-choose {
+    grid-area: choose;
+    overflow: auto;
+}
+
+.button {
+    width: 100%;
+    height: 75px;
+    background: white;
+    border-left: 0;
+    border-top: 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-areas:
+        "name name alignment"
+        "gender-race gender-race gender-race"
+        "symbols symbols symbols"
+    ;
+    grid-template-columns: 100/3% 100/3% 100/3%;
+    grid-template-rows: 40% 30% 30%;
+}
+
+.button:hover {
+    background: #c2c4c4;
+}
+
+.name {
+    grid-area: name;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.15em;
+    font-family: 'Cinzel', serif;
+    padding: 3px 0 0 5px;
+}
+
+.gender-race {
+    grid-area: gender-race;
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 500;
+    font-size: 1.10em;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.alignment {
+    grid-area: alignment;
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 500;
+    font-size: 1.10em;
+    text-align: right;
+    padding-top: 7px;
+}
+
+.symbol {
+    grid-area: symbols;
+    font-family: 'Gayathri', sans-serif;
+    font-weight: 500;
+    font-size: 1.10em;
+    text-align: left;
+    padding-left: 5px;
+}
